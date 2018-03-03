@@ -1,0 +1,22 @@
+version: '3.3'
+
+services:
+  osrm_backend:
+    build:
+      context: .
+      args:
+        DATA_DIR: "/data"
+        OSM_URL: "http://download.geofabrik.de"
+        OSM_PATH: "europe/germany"
+        OSM_NAME: "berlin-latest"
+        OSM_PBF: "osm.pbf"
+        OSM_OSRM: "osrm"
+    image: rstreics/osrm:latest
+    ports:
+      - "5000:5000"
+    links:
+      - "osrm_frontend"
+  osrm_frontend:
+    image: osrm/osrm-frontend
+    ports:
+      - "9966:9966"
