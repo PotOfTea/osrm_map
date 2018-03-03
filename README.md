@@ -90,5 +90,5 @@ After changes are merged into mainline branch:
     * Most code is mocked as there are not unit/integration/smoke testes
     * Code doesn't produce any reports
     * Images should be tagged with proper version
-    * Most of code could moved to shared pipeline library, which would allow this to used as reused/template
+    * Most of code could be moved to shared pipeline library, which would allow this to be used/reused/templated
 
