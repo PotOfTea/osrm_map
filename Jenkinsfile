@@ -1,6 +1,9 @@
 pipeline {
-   agent any
+  agent any
 
+  triggers {
+          cron('H 16 * * 0')
+  }
   environment {
     docker_tool = "${tool name: 'docker', type: 'org.jenkinsci.plugins.docker.commons.tools.DockerTool'}"
     registry = 'docker-registry.com'

@@ -85,6 +85,10 @@ After changes are merged into mainline branch:
 
 ## Jenkins pipeline file
 
-* Deployment is done via "very basic" way, this is no way how to do proper container deployment
-* Image should tagged with proper version
-* Most of code could moved to shared pipeline library, which would allow this to used as reused/template
+* Although task specified ideal CD pipeline, due to task scope this not possible 
+    * Deployment is done in "very basic" way, this is no way how to do proper container deployment
+    * Most code is mocked as there are not unit/integration/smoke testes
+    * Code doesn't produce any reports
+    * Images should be tagged with proper version
+    * Most of code could moved to shared pipeline library, which would allow this to used as reused/template
+
